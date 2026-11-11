@@ -1,0 +1,10 @@
+/* matemática · acentos da área (paleta original: #1d4ed8 → #06b6d4) */
+body {
+  --area-1: #1d4ed8;
+  --area-2: #06b6d4;
+}
+.activity:nth-child(2n)::after { background: linear-gradient(90deg, var(--area-2), var(--area-1)); }
+.activity:nth-child(3n)::after { background: linear-gradient(90deg, var(--area-1), var(--area-2), var(--area-1)); }
+.chip:hover { border-color: var(--area-1); color: var(--area-1); }
+.crumb a:hover { color: var(--area-1); }
+.link-input:focus { border-color: var(--area-1); }

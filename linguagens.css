@@ -1,0 +1,9 @@
+/* linguagens · acentos da área (paleta original: #be185d → #f472b6) */
+body {
+  --area-1: #be185d;
+  --area-2: #f472b6;
+}
+.activity:nth-child(2n)::after { background: linear-gradient(90deg, var(--area-2), var(--area-1)); }
+.chip:hover { border-color: var(--area-1); color: var(--area-1); }
+.crumb a:hover { color: var(--area-1); }
+.link-input:focus { border-color: var(--area-1); }
