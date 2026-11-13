@@ -8,44 +8,62 @@
 <meta name="description" content="Portfólio acadêmico do 3º ano do Ensino Médio com integração técnica em Análise e Desenvolvimento de Sistemas." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300..800&family=JetBrains+Mono:wght@300..600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Bodoni+Moda:ital,wght@1,400..700&family=Manrope:wght@300..800&family=JetBrains+Mono:wght@300..600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="index.css" />
 </head>
-<body>
+<body class="home">
+<div id="bg-layer" aria-hidden="true"></div>
 <div class="curtain" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
 <div class="scroll-progress" aria-hidden="true"></div>
 <div class="cursor-glow" aria-hidden="true"></div>
-<header class="site-header" id="header">
-  <a href="index.html" class="brand"><span class="owner" style="font-family:inherit;opacity:.9">Arthur Wolf</span><span>3º ano EM</span></a>
-  <button class="nav-toggle" id="nav-toggle" aria-label="Menu">[ menu ]</button>
-  <nav class="nav" id="nav">
-    <a href="index.html" class="active">início</a>
-    <a href="humanas.html">humanas</a>
-    <a href="natureza.html">natureza</a>
-    <a href="matematica.html">matemática</a>
-    <a href="linguagens.html">linguagens</a>
-    <a href="ads.html">A.D.S.</a>
-  </nav>
-</header>
 
-<main>
-  <section class="hero">
-    <div class="eyebrow reveal">Portfólio Acadêmico · 2026</div>
-    <div id="globe-container">
-    </div>
-    <h1 class="reveal">Portfolio <em>Acadêmico</em><br/></h1>
-    <p class="lead reveal">Mural de atividades coletadas ao longo do 3º ano do Ensino Médio integrado ao curso técnico de Análise e Desenvolvimento de Sistemas.</p>
-    <div class="meta reveal">
-    </div>
+<main class="home-main">
+
+  <!-- ===================== INÍCIO: globo + seletor ===================== -->
+  <section class="hero" id="inicio">
+    <div id="globe-container" aria-hidden="true"></div>
+
+    <section class="home-intro">
+      <div class="eyebrow">Portfólio Acadêmico · 2026</div>
+      <h1 class="reveal">Portfolio <em>Acadêmico</em></h1>
+      <p class="lead">Mural de atividades do 3º ano do Ensino Médio integrado ao curso técnico de Análise e Desenvolvimento de Sistemas.</p>
+    </section>
+
+    <div class="orbit" aria-hidden="true"></div>
+
+    <nav class="ring-nav" id="ring-nav" aria-label="Seções do portfólio">
+      <a href="#sec-materias" class="ring-item" data-target="sec-materias" data-key="1" style="--a:235deg">
+        <span class="ring-label">Matérias</span><span class="ring-dot" aria-hidden="true"></span></a>
+      <a href="#sec-redes" class="ring-item" data-target="sec-redes" data-key="2" style="--a:213deg">
+        <span class="ring-label">Redes</span><span class="ring-dot" aria-hidden="true"></span></a>
+      <a href="#sec-projetos" class="ring-item" data-target="sec-projetos" data-key="3" style="--a:191deg">
+        <span class="ring-label">Projetos</span><span class="ring-dot" aria-hidden="true"></span></a>
+      <a href="#sec-sobre" class="ring-item" data-target="sec-sobre" data-key="4" style="--a:169deg">
+        <span class="ring-label">Sobre</span><span class="ring-dot" aria-hidden="true"></span></a>
+      <a href="#sec-contato" class="ring-item" data-target="sec-contato" data-key="5" style="--a:147deg">
+        <span class="ring-label">Contato</span><span class="ring-dot" aria-hidden="true"></span></a>
+      <a href="#sec-config" class="ring-item" data-target="sec-config" data-key="6" style="--a:125deg">
+        <span class="ring-label">Config</span><span class="ring-dot" aria-hidden="true"></span></a>
+    </nav>
   </section>
 
-  <div class="marquee" aria-hidden="true"><div class="marquee-track"><span>Ciências Humanas</span><span>Ciências da Natureza</span><span>Matemática</span><span>Linguagens</span><span>Análise e Desenvolvimento de Sistemas</span><span>Ciências Humanas</span><span>Ciências da Natureza</span><span>Matemática</span><span>Linguagens</span><span>Análise e Desenvolvimento de Sistemas</span></div></div>
-  <section class="areas container">
-    <div class="areas-head">
-      <h2 class="reveal">Áreas do <em>conhecimento</em></h2>
-      <p class="mono reveal" style="max-width:280px;opacity:.6">Cada área reúne três atividades selecionadas com descrição, anexos e marcadores temáticos.</p>
-    </div>
+  <!-- barra de troca de seção (aparece quando uma seção está aberta) -->
+  <nav class="view-nav" id="view-nav" aria-label="Trocar de seção">
+    <a href="#inicio" class="view-link" data-target="inicio">início</a>
+    <a href="#sec-materias" class="view-link" data-target="sec-materias">matérias</a>
+    <a href="#sec-redes" class="view-link" data-target="sec-redes">redes</a>
+    <a href="#sec-projetos" class="view-link" data-target="sec-projetos">projetos</a>
+    <a href="#sec-sobre" class="view-link" data-target="sec-sobre">sobre</a>
+    <a href="#sec-contato" class="view-link" data-target="sec-contato">contato</a>
+    <a href="#sec-config" class="view-link" data-target="sec-config">config</a>
+  </nav>
 
+  <!-- ===================== MATÉRIAS ===================== -->
+  <section class="sec container" id="sec-materias">
+    <div class="areas-head">
+      <h2 class="reveal">Matérias <em>&amp; áreas</em></h2>
+      <p class="mono reveal" style="max-width:300px;opacity:.6">Cada área reúne atividades com descrição, anexos e marcadores temáticos.</p>
+    </div>
     <div class="areas-grid">
       <a class="area-card reveal" href="humanas.html" style="--card-gradient:linear-gradient(135deg,#c2410c,#f59e0b);" data-n="01">
         <div class="num">01 / Humanas</div>
@@ -89,12 +107,13 @@
       </a>
     </div>
   </section>
-  <section class="contact container" id="contato">
-    <div class="areas-head">
-      <h2 class="reveal">Contato & <em>redes</em></h2>
-      <p class="mono reveal" style="max-width:280px;opacity:.6">Canais para conversar sobre projetos, estudos e oportunidades.</p>
-    </div>
 
+  <!-- ===================== REDES ===================== -->
+  <section class="sec container" id="sec-redes">
+    <div class="areas-head">
+      <h2 class="reveal">Redes <em>sociais</em></h2>
+      <p class="mono reveal" style="max-width:300px;opacity:.6">Acompanhe por aqui os canais públicos.</p>
+    </div>
     <div class="contact-grid">
       <a class="contact-card reveal" href="https://github.com/Awkoode" target="_blank" rel="noopener noreferrer">
         <span class="contact-icon">
@@ -103,7 +122,6 @@
         <strong>GitHub</strong>
         <span class="handle">@Awkoode</span>
       </a>
-
       <a class="contact-card reveal" href="https://www.instagram.com/wolf_k___/?hl=pt-br" target="_blank" rel="noopener noreferrer">
         <span class="contact-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.7" fill="currentColor" stroke="none"/></svg>
@@ -111,15 +129,64 @@
         <strong>Instagram</strong>
         <span class="handle">@wolf_k___</span>
       </a>
-
-      <a class="contact-card reveal" href="https://www.linkedin.com/in/arthur-wolf-kologeski-373420368?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer">
+      <a class="contact-card reveal" href="https://www.linkedin.com/in/arthur-wolf-kologeski-373420368" target="_blank" rel="noopener noreferrer">
         <span class="contact-icon">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
         </span>
         <strong>LinkedIn</strong>
         <span class="handle">Arthur Wolf Kologeski</span>
       </a>
+    </div>
+  </section>
 
+  <!-- ===================== PROJETOS ===================== -->
+  <section class="sec container" id="sec-projetos">
+    <div class="areas-head">
+      <h2 class="reveal">Projetos <em>técnicos</em></h2>
+      <p class="mono reveal" style="max-width:300px;opacity:.6">Trabalhos do curso técnico de Análise e Desenvolvimento de Sistemas.</p>
+    </div>
+    <div class="contact-grid">
+      <a class="contact-card reveal" href="ads.html">
+        <span class="contact-icon"><span class="sq-n">01</span></span>
+        <strong>Rinha FullStack SENAI 2026</strong>
+        <span class="handle">Programação de aplicativos</span>
+      </a>
+      <a class="contact-card reveal" href="ads.html">
+        <span class="contact-icon"><span class="sq-n">02</span></span>
+        <strong>Lógica de LEDS e Arduino</strong>
+        <span class="handle">Lógica · Hardware</span>
+      </a>
+      <a class="contact-card reveal" href="ads.html">
+        <span class="contact-icon"><span class="sq-n">03</span></span>
+        <strong>Área completa de A.D.S.</strong>
+        <span class="handle">Banco de Dados · Front-end · Back-end · UX</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===================== SOBRE ===================== -->
+  <section class="sec container" id="sec-sobre">
+    <div class="areas-head">
+      <h2 class="reveal">Sobre <em>mim</em></h2>
+    </div>
+    <div class="sobre-grid">
+      <p class="reveal sobre-text">Sou Arthur Wolf Kologeski, estudante do 3º ano do Ensino Médio integrado ao curso técnico de Análise e Desenvolvimento de Sistemas.</p>
+      <p class="reveal sobre-text">Este portfólio reúne atividades das quatro áreas do conhecimento e do curso técnico, organizadas por matéria.</p>
+      <dl class="facts reveal">
+        <dt>nome</dt><dd>Arthur Wolf Kologeski</dd>
+        <dt>formação</dt><dd>Ensino Médio integrado · Técnico em ADS</dd>
+        <dt>ano</dt><dd>3º ano · 2026</dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ===================== CONTATO ===================== -->
+  <section class="sec container" id="sec-contato">
+    <div class="areas-head">
+      <h2 class="reveal">Contato</h2>
+      <p class="mono reveal" style="max-width:300px;opacity:.6">Canais para conversar sobre projetos, estudos e oportunidades.</p>
+    </div>
+    <div class="contact-grid">
       <a class="contact-card reveal" href="mailto:arthur.awkologeski@gmail.com">
         <span class="contact-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 7 9 6 9-6"/></svg>
@@ -129,14 +196,84 @@
       </a>
     </div>
   </section>
-</main>
 
-<footer class="site-footer">
-  <div>© 2026 · Arthur Wolf Kologeski</div>
-  <div>Todos os direitos reservados</div>
-</footer>
+  <!-- ===================== CONFIG ===================== -->
+  <section class="sec container" id="sec-config">
+    <div class="areas-head">
+      <h2 class="reveal">Config <em>visual</em></h2>
+      <p class="mono reveal" style="max-width:300px;opacity:.6">Cada quadrado muda uma parte do site. As escolhas ficam salvas neste navegador.</p>
+    </div>
+
+    <div class="cfg-grid">
+      <button type="button" class="cfg-tile reveal" data-cycle="theme" aria-label="Tema">
+        <span class="contact-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </span>
+        <strong>Tema</strong><span class="cfg-val" data-val="theme">—</span>
+      </button>
+
+      <button type="button" class="cfg-tile reveal" data-cycle="bg" aria-label="Fundo">
+        <span class="contact-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M3 15c4-3 7 3 11 0s5-3 7 0"/></svg>
+        </span>
+        <strong>Fundo</strong><span class="cfg-val" data-val="bg">—</span>
+      </button>
+
+      <button type="button" class="cfg-tile reveal" data-cycle="accent" aria-label="Cor de destaque">
+        <span class="contact-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg>
+        </span>
+        <strong>Destaque</strong><span class="cfg-val" data-val="accent">—</span>
+      </button>
+
+      <button type="button" class="cfg-tile reveal" data-cycle="ink" aria-label="Cor do texto">
+        <span class="contact-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 19 9 5l5 14M6 14h6"/><path d="M15 19l3-8 3 8M16 16h4"/></svg>
+        </span>
+        <strong>Texto</strong><span class="cfg-val" data-val="ink">—</span>
+      </button>
+
+      <label class="cfg-tile reveal" aria-label="Cor personalizada">
+        <span class="contact-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3a9 9 0 1 0 0 18c1.1 0 1.6-.8 1.6-1.6 0-1.1-.9-1.4-.9-2.5 0-.8.7-1.5 1.5-1.5H17a4 4 0 0 0 4-4C21 6.6 17 3 12 3z"/><circle cx="7.5" cy="11" r="1" fill="currentColor"/><circle cx="10" cy="7.5" r="1" fill="currentColor"/><circle cx="15" cy="7.5" r="1" fill="currentColor"/></svg>
+        </span>
+        <strong>Cor livre</strong><span class="cfg-val">escolher</span>
+        <input type="color" data-set="custom" value="#1d4ed8" aria-label="Cor personalizada" />
+      </label>
+
+      <button type="button" class="cfg-tile reveal" data-toggle="grain" aria-label="Grão de papel">
+        <span class="contact-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="7" cy="8" r="1.2"/><circle cx="12" cy="5" r="1.2"/><circle cx="17" cy="9" r="1.2"/><circle cx="9" cy="14" r="1.2"/><circle cx="15" cy="15" r="1.2"/><circle cx="6" cy="19" r="1.2"/><circle cx="18" cy="19" r="1.2"/></svg>
+        </span>
+        <strong>Grão de papel</strong><span class="cfg-val" data-val="grain">—</span>
+      </button>
+
+      <button type="button" class="cfg-tile reveal" data-toggle="globe" aria-label="Globo">
+        <span class="contact-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg>
+        </span>
+        <strong>Globo</strong><span class="cfg-val" data-val="globe">—</span>
+      </button>
+
+      <button type="button" class="cfg-tile reveal" data-reset="1" aria-label="Restaurar padrão">
+        <span class="contact-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12a8 8 0 1 0 2.3-5.6M4 4v4h4"/></svg>
+        </span>
+        <strong>Restaurar</strong><span class="cfg-val">padrão</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ===================== RODAPÉ ===================== -->
+  <footer class="home-foot">
+    <div class="foot-name">Arthur Wolf <em>Kologeski</em></div>
+    <div class="foot-meta">© 2026 · Portfólio acadêmico · Todos os direitos reservados</div>
+  </footer>
+
+</main>
 
 <script src="engine.js"></script>
 <script src="field.js"></script>
+<script src="shell.js"></script>
 </body>
 </html>

@@ -44,7 +44,9 @@
     const cs = getComputedStyle(document.body);
     const acc = hexToRgb(cs.getPropertyValue('--accent') || '') || colors.accent;
     const dark = document.body.classList.contains('dark');
-    colors = { accent: acc, ink: dark ? [241, 237, 228] : [26, 26, 26] };
+    // usa a cor de texto escolhida na Config; senão, a padrão do tema
+    const ink = hexToRgb(cs.getPropertyValue('--ink') || '') || (dark ? [241, 237, 228] : [26, 26, 26]);
+    colors = { accent: acc, ink };
   }
 
   /* ---- geometria ---- */
