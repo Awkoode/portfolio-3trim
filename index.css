@@ -1288,9 +1288,66 @@ body.home .contact-card .handle { font-size: 0.68rem; }
 .sq-n { font-family: var(--font-mono); font-size: 0.8rem; color: var(--ink); }
 
 /* sobre */
-.sobre-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 28px 48px; align-items: start; }
-.sobre-text { font-size: 1.15rem; color: var(--ink-soft); max-width: 60ch; }
-.sobre-grid .facts { margin-top: 0; grid-column: 1 / -1; font-size: 0.8rem; }
+.sobre-grid { display: grid; grid-template-columns: 340px 1fr; gap: 48px 60px; align-items: start; }
+.sobre-text {
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+  max-width: 60ch;
+  letter-spacing: normal;      /* remove espaçamento forçado entre letras */
+  text-transform: none;        /* evita maiúsculas forçadas no texto longo */
+  line-height: 1.7;            /* espaço entre linhas para leitura confortável */
+}
+.sobre-text strong {
+  letter-spacing: normal;
+  text-transform: none;
+}
+.sobre-grid .facts { grid-column: 1 / -1; font-size: 0.8rem; margin-top: 24px; }
+.sobre-grid .facts dt,
+.sobre-grid .facts dd {
+  letter-spacing: normal;
+  text-transform: none;
+  font-family: var(--font-body);
+}
+.sobre-grid .facts dt {
+  color: var(--muted);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.sobre-grid .facts dd {
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+/* ---------- foto lateral da seção Sobre ---------- */
+.about-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-photo-img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  border-radius: var(--radius);
+  object-fit: cover;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-lg);
+  display: block;
+}
+
+/* responsivo: no mobile a foto fica acima dos textos */
+@media (max-width: 900px) {
+  .sobre-grid {
+    grid-template-columns: 1fr;
+    gap: 32px 0;
+  }
+  .about-photo {
+    max-width: 260px;
+    margin: 0 auto;
+  }
+}
 
 /* config: quadrados com ícone */
 .cfg-grid {
